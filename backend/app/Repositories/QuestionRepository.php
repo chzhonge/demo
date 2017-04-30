@@ -16,12 +16,22 @@ class QuestionRepository
         return $question->question;
     }
 
-    public function checkQuestionIsPlayed()
+    public function getQuestionAnswer()
+    {
+        return Question::where('played', false)->orderBy('id', 'desc')->first()->question;
+    }
+
+    public function checkQuestionPlayed()
     {
         if (Question::where('played', false)->count() == 0) {
             return $this->getFirstQuestion();
         } else {
-            return Question::where('played', false)->first()->value('question');
+            return Question::where('played', false)->orderBy('id', 'desc')->first()->question;
         }
+    }
+
+    public function restartQuestion()
+    {
+        Question::where('played', false)->update(['played' => true]);
     }
 }

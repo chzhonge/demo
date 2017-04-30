@@ -16,8 +16,8 @@
         .input-height {
             height: 46px;
         }
-        .textarea-height {
-            height: 450px;
+        .font {
+            font-size: 20px;
         }
         @media  (min-width: 992px) {
             .label-size {
@@ -38,64 +38,65 @@
                     <h3>{{ hint }} {{ finalAnswer }}</h3>
                 </div>
                 <div class="col-md-4 col-lg-4">
-                    <button class="btn btn-default btn-lg btn-block btn-on-baseline">重新遊戲</button>
+                    <button class="btn btn-default btn-lg btn-block btn-on-baseline" v-on:click="restartGame">重新遊戲</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-6">
-                    <div class="form-group">
+                    <div class="form-group" v-if="!success">
                         <label></label>
-                        <input type="text" class="form-control input-height" v-model="userAnswer" placeholder="請輸入不重複數字">
+                        <input type="text" class="form-control input-height font" v-model="userAnswer" placeholder="請輸入不重複數字">
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4">
-                    <div class="form-group">
+                    <div class="form-group" v-if="!success">
                         <label></label>
                         <button type="button" class="btn btn-default btn-lg btn-block" v-on:click="checkGameAnswer">Go</button>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 col-lg-12">
-                    <span class="help-block"></span>
+                <div class="col-md-6 col-lg-6">
+                    <span class="help-block"><p class="text-primary text-center">{{ helpMsg }}</p></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-6">
-                    <textarea class="form-control" style="height: 450px;" cols="50" row="10"></textarea>
+                    <textarea class="form-control font" v-model="answerHistory" style="height: 450px; resize: none;"></textarea>
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <label class="label-size" ></label>
-                    <button type="button" v-on:click="" class="btn btn-default btn-lg btn-block">下載作答紀錄</button>
+                    <a class="btn btn-default btn-lg btn-block" download href="./backend/public/download">下載作答紀錄</a>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        var START_GAME_URL='./backend/public/start';
-        var CHECK_ANSWER_URL='./backend/public/check';
-
+        var START_GAME_URL = './backend/public/start';
+        var RESTART_GAME_URL = './backend/public/restart';
+        var ANSWER_HISTORY_URL = './backend/public/history';
+        var CHECK_ANSWER_URL = './backend/public/check';
         var app = new Vue({
             el: '#app',
             data: {
                 title: '猜數字',
                 hint: '答案提示：',
-                answerRecord: '作答紀錄',
+                helpMsg: '',
+                answerHistory: '作答紀錄',
                 finalAnswer: '',
                 userAnswer: '',
-                answerList: []
+                answerList:'',
+                success: false
             },
             mounted: function () {
                 this.checkGamePlayed();
             },
             methods:{
                 checkGamePlayed:function () {
-                    if (typeof (localStorage.played) == 'undefined') {
-                        this.getGameQuestion();
-                        this.setPlayedLocalStorage();
-                    } else {
-                        this.getGameQuestion();
-                    }
+                    this.getSuccessLocalStorage();
+                    this.getGameQuestion();
+                    this.getAnswerHistory();
+
                 },
                 getGameQuestion:function () {
                     var self = this;
@@ -107,8 +108,29 @@
                             console.log(error);
                         });
                 },
-                setPlayedLocalStorage:function () {
-                    localStorage.played = true;
+                getAnswerHistory:function () {
+                    var self = this;
+                    axios.get(ANSWER_HISTORY_URL)
+                        .then(function (response) {
+                            var data = response.data['history'];
+                            for (s = 0; s < Object.keys(data).length; s++) {
+                                self.answerHistory +='\r\n';
+                                self.answerHistory +=data[s].answer+'：'+data[s].state;
+                            }
+                            console.log(response.data['history']);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                },
+                getSuccessLocalStorage:function () {
+                    if (typeof localStorage.success === "undefined") {
+                        this.success = false;
+                        this.helpMsg ='';
+                    } else {
+                        this.success = true;
+                        this.helpMsg = localStorage['helpMsg'];
+                    }
                 },
                 checkGameAnswer:function () {
                     var self = this;
@@ -116,7 +138,35 @@
                         userAnswer: self.userAnswer
                     })
                         .then(function (response) {
-                            console.log(response);
+                            if (typeof response.data.error !== 'undefined') {
+                                self.helpMsg = response.data.error[0];
+                            }
+                            else {
+                                var data = response.data[0].data;
+                                self.answerHistory +='\r\n';
+                                self.answerHistory += self.userAnswer+'：'+data.state;
+                                if (data.state =='4A0B') {
+                                    self.success = true;
+                                    self.helpMsg = self.userAnswer+'：正確';
+                                    localStorage.setItem("success", true);
+                                    localStorage.setItem("helpMsg", self.userAnswer+'：正確');
+                                }
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                },
+                restartGame:function () {
+                    localStorage.removeItem("success");
+                    localStorage.removeItem('helpMsg');
+                    this.answerHistory = '作答紀錄';
+                    this.helpMsg = '';
+                    this.success = false;
+                    var self = this;
+                    axios.get(RESTART_GAME_URL)
+                        .then(function (response) {
+                            self.finalAnswer = response.data['question'];
                         })
                         .catch(function (error) {
                             console.log(error);

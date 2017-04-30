@@ -11,14 +11,12 @@
 |
 */
 
-//$app->get('/start', function () use ($app) {
-//    return $app->version();
-//});
-
-
 $app->get('/start', 'GameController@start');
+$app->get('/restart', 'GameController@restart');
+$app->get('/history', 'GameController@getAnswerHistory');
+$app->get('/download', 'GameController@downloadHistory');
 
 $app->group(['middleware' => 'game'], function () use ($app) {
-    $app->post('/check', 'GameController@checkAnswer');
+    $app->post('/check', 'GameController@checkUsedAnswer');
 
 });
