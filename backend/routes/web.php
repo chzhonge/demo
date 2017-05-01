@@ -18,5 +18,4 @@ $app->get('/download', 'GameController@downloadHistory');
 
 $app->group(['middleware' => 'game'], function () use ($app) {
     $app->post('/check', 'GameController@checkUsedAnswer');
-
 });

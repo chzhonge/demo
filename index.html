@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bulls and Cows</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -23,7 +23,6 @@
             .label-size {
                 height: 397px;
             }
-
         }
     </style>
 </head>
@@ -96,13 +95,14 @@
                     this.getSuccessLocalStorage();
                     this.getGameQuestion();
                     this.getAnswerHistory();
-
                 },
                 getGameQuestion:function () {
                     var self = this;
                     axios.get(START_GAME_URL)
                         .then(function (response) {
-                            self.finalAnswer = response.data['question'];
+                            if (self.notError(response.data.error, self)) {
+                                self.finalAnswer = response.data['question'];
+                            }
                         })
                         .catch(function (error) {
                             console.log(error);
@@ -112,12 +112,14 @@
                     var self = this;
                     axios.get(ANSWER_HISTORY_URL)
                         .then(function (response) {
-                            var data = response.data['history'];
-                            for (s = 0; s < Object.keys(data).length; s++) {
-                                self.answerHistory +='\r\n';
-                                self.answerHistory +=data[s].answer+'：'+data[s].state;
+                            if (self.notError(response.data.error, self)) {
+                                var data = response.data['history'];
+                                for (var s = 0; s < Object.keys(data).length; s++) {
+                                    self.answerHistory +='\r\n';
+                                    self.answerHistory +=data[s].answer+'：'+data[s].state;
+                                }
+                                console.log(response.data['history']);
                             }
-                            console.log(response.data['history']);
                         })
                         .catch(function (error) {
                             console.log(error);
@@ -138,8 +140,20 @@
                         userAnswer: self.userAnswer
                     })
                         .then(function (response) {
+                            if (response.data.error === 'PDO Drivers尚未安裝或資料庫問題，請查看Lumen.log。') {
+                                self.helpMsg = 'PDO Drivers尚未安裝或資料庫問題，請查看Lumen.log。';
+                                return;
+                            }
                             if (typeof response.data.error !== 'undefined') {
-                                self.helpMsg = response.data.error[0];
+                                var data = response.data.error;
+                                self.helpMsg = '';
+                                for (var s = 0; s < Object.keys(data).length; s++) {
+                                    self.helpMsg += data[s];
+                                    if ( s !== Object.keys(data).length -1) {
+                                        self.helpMsg +='、';
+                                    }
+                                }
+                                self.helpMsg += '。';
                             }
                             else {
                                 var data = response.data[0].data;
@@ -158,19 +172,28 @@
                         });
                 },
                 restartGame:function () {
-                    localStorage.removeItem("success");
-                    localStorage.removeItem('helpMsg');
-                    this.answerHistory = '作答紀錄';
-                    this.helpMsg = '';
-                    this.success = false;
                     var self = this;
                     axios.get(RESTART_GAME_URL)
                         .then(function (response) {
-                            self.finalAnswer = response.data['question'];
+                            if (this.notError(response.data.error, this)) {
+                                localStorage.removeItem("success");
+                                localStorage.removeItem('helpMsg');
+                                self.answerHistory = '作答紀錄';
+                                self.helpMsg = '';
+                                self.success = false;
+                                self.finalAnswer = response.data['question'];
+                            }
                         })
                         .catch(function (error) {
                             console.log(error);
                         });
+                },
+                notError:function (error, self) {
+                    if ( typeof error === undefined) {
+                        self.helpMsg = error;
+                        return false;
+                    }
+                    return true;
                 }
             }
         })

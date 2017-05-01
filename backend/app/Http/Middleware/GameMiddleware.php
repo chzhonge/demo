@@ -7,6 +7,7 @@ use Zhong\GameConfig;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use App\Http\Controllers;
+use App\Models\Question;
 
 use Validator;
 
@@ -22,11 +23,12 @@ class GameMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+
         $messages = [
-            'required'    => '請輸入答案。',
-            'from_number_zero_int' => '請輸入數字。',
-            'answer_length' => '請輸入長度為'.GameConfig::$ANSWER_LENGTH.'的數字。',
-            'answer_not_repeat' => '輸入'.GameConfig::$ANSWER_LENGTH.'個不重複的數字'
+            'required'    => '請輸入答案',
+            'from_number_zero_int' => '請輸入數字',
+            'answer_length' => '請輸入長度為'.GameConfig::$ANSWER_LENGTH.'的數字',
+            'answer_not_repeat' => '請輸入'.GameConfig::$ANSWER_LENGTH.'個不重複的數字'
         ];
 
         $rules = [
@@ -36,8 +38,12 @@ class GameMiddleware
         $validator = Validator::make($request->all(), $rules, $messages);
 
         if ($validator->fails()) {
-            return response()->json(['status' => 200, 'error' => $validator->errors()->all()]);
+            $error = $validator->errors()->all();
+            return response()->json(['status' => 200, 'error' => $error]);
         }
+
+
+
         return $next($request);
     }
 

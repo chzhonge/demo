@@ -27,9 +27,9 @@ class AnswerRepository
 
     public function getAnswerHistory()
     {
-        $questionID = Question::where('played', false)->orderBy('id', 'desc')->first()->question;
+        $questionID = Question::where('played', false)->orderBy('id', 'desc')->first()->id;
         if (Answer::where('questionID', $questionID)->count() == 0) {
-            return '';
+            return array();
         }
         return Answer::where('questionID', $questionID)->get();
     }

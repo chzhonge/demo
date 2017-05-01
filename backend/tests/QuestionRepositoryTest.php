@@ -1,13 +1,10 @@
 <?php
 
-use Laravel\Lumen\Testing\DatabaseMigrations;
-use Laravel\Lumen\Testing\DatabaseTransactions;
 use App\Repositories\QuestionRepository;
 use App\Models\Question;
 
 class QuestionRepositoryTest extends TestCase
 {
-
     protected $repository = null;
 
     public function setUp()
