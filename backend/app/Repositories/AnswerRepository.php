@@ -8,7 +8,7 @@ class AnswerRepository
 {
     public function checkTheUsedAnswer($userAnswer)
     {
-        $questionID = Question::where('played', false)->orderBy('id', 'desc')->first()->question;
+        $questionID = Question::where('played', false)->orderBy('id', 'desc')->first()->id;
         if (Answer::where('answer', $userAnswer)->where('questionID', $questionID)->count() == 0) {
             return false;
         }
@@ -17,7 +17,7 @@ class AnswerRepository
 
     public function saveAnswer($userAnswer, $userAnswerState)
     {
-        $questionID = Question::where('played', false)->orderBy('id', 'desc')->first()->question;
+        $questionID = Question::where('played', false)->orderBy('id', 'desc')->first()->id;
         $answer = new Answer;
         $answer->answer = $userAnswer;
         $answer->state = $userAnswerState;

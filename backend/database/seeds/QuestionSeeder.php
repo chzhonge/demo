@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class QuestionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('AnswerSeeder');
-        $this->call('QuestionSeeder');
+        DB::table('questions')->insert([
+            'question' => '0123',
+            'played' => false
+        ]);
     }
 }

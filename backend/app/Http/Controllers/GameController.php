@@ -39,9 +39,6 @@ class GameController extends Controller
         $this->answerRepository->saveAnswer($request->userAnswer, $this->checkAnswerAB($request->userAnswer));
         $msg['data']['answer'] = $request->userAnswer;
         $msg['data']['state'] = $this->checkAnswerAB($request->userAnswer);
-//        if ($this->checkAnswerAB($request->userAnswer)=='4A0B') {
-//            $this->questionRepository->restartQuestion();
-//        }
         return response()->json(['status' => 200, $msg]);
     }
 
@@ -89,8 +86,6 @@ class GameController extends Controller
             }
             fclose($file);
         }
-
-
         return response()->download(getcwd().'/answerHistory.txt', 'answerHistory.txt');
     }
 }
