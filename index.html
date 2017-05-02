@@ -75,6 +75,7 @@
         var RESTART_GAME_URL = './backend/public/restart';
         var ANSWER_HISTORY_URL = './backend/public/history';
         var CHECK_ANSWER_URL = './backend/public/check';
+        var ANSWER_LENGTH = 4;
         var app = new Vue({
             el: '#app',
             data: {
@@ -159,12 +160,14 @@
                                 var data = response.data[0].data;
                                 self.answerHistory +='\r\n';
                                 self.answerHistory += self.userAnswer+'：'+data.state;
-                                if (data.state =='4A0B') {
+                                if (data.state == ANSWER_LENGTH+'A0B') {
                                     self.success = true;
                                     self.helpMsg = self.userAnswer+'：正確';
                                     localStorage.setItem("success", true);
                                     localStorage.setItem("helpMsg", self.userAnswer+'：正確');
                                 }
+                                self.helpMsg = '輸入的答案：'+self.userAnswer+'：'+response.data[0].data.state;
+                                self.userAnswer ='';
                             }
                         })
                         .catch(function (error) {
@@ -175,13 +178,14 @@
                     var self = this;
                     axios.get(RESTART_GAME_URL)
                         .then(function (response) {
-                            if (this.notError(response.data.error, this)) {
+                            if (self.notError(response.data.error, this)) {
                                 localStorage.removeItem("success");
                                 localStorage.removeItem('helpMsg');
                                 self.answerHistory = '作答紀錄';
                                 self.helpMsg = '';
                                 self.success = false;
                                 self.finalAnswer = response.data['question'];
+                                self.userAnswer ='';
                             }
                         })
                         .catch(function (error) {

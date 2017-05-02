@@ -25,8 +25,7 @@ class GameController extends Controller
     public function restart()
     {
         $this->questionRepository->restartQuestion();
-        return response()->json(['status' => 200,
-            'question' => $this->questionRepository->checkQuestionPlayed()]);
+        return response()->json(['status' => 200,'question' => $this->questionRepository->checkQuestionPlayed()]);
     }
 
     public function checkUsedAnswer(Request $request)
