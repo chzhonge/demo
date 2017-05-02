@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c446b895-714d-4ea4-baa5-66a315c1bf48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.env" afterPath="$PROJECT_DIR$/backend/.env" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/database/database.sqlite" afterPath="$PROJECT_DIR$/backend/database/database.sqlite" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/public/answerHistory.txt" afterPath="$PROJECT_DIR$/backend/public/answerHistory.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,21 +114,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.answers" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/cd44c293/0bf0ae66-4877-4a35-ad98-8727871fc3d1/main.answers">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DatabaseMiddleware.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/app/Http/Middleware/DatabaseMiddleware.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -202,9 +188,26 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="33" selection-end-line="168" selection-end-column="33" />
+            <state relative-caret-position="273">
+              <caret line="63" column="148" lean-forward="false" selection-start-line="63" selection-start-column="148" selection-end-line="63" selection-end-column="148" />
+              <folding>
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.answers" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/cd44c293/0bf0ae66-4877-4a35-ad98-8727871fc3d1/main.answers">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -276,7 +279,6 @@
         <option value="dbtable:/cd44c293/0bf0ae66-4877-4a35-ad98-8727871fc3d1/main.answers" />
         <option value="$PROJECT_DIR$/backend/database/migrations/2017_04_29_082035_create_answers_table.php" />
         <option value="$PROJECT_DIR$/backend/routes/web.php" />
-        <option value="$PROJECT_DIR$/backend/.env" />
         <option value="$PROJECT_DIR$/backend/bootstrap/app.php" />
         <option value="$PROJECT_DIR$/backend/storage/logs/lumen.log" />
         <option value="$PROJECT_DIR$/backend/tests/TestCase.php" />
@@ -288,6 +290,7 @@
         <option value="$PROJECT_DIR$/backend/app/Repositories/QuestionRepository.php" />
         <option value="$PROJECT_DIR$/backend/app/Repositories/AnswerRepository.php" />
         <option value="$PROJECT_DIR$/backend/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/backend/.env" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -609,7 +612,7 @@
       <workItem from="1493439237397" duration="27053000" />
       <workItem from="1493526504475" duration="39192000" />
       <workItem from="1493611958005" duration="19038000" />
-      <workItem from="1493685982723" duration="6703000" />
+      <workItem from="1493685982723" duration="7435000" />
     </task>
     <servers />
   </component>
@@ -637,7 +640,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113596000" />
+    <option name="totallyTimeSpent" value="114328000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -938,26 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/cd44c293/0bf0ae66-4877-4a35-ad98-8727871fc3d1/main.answers">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -986,19 +969,6 @@
           <folding>
             <element signature="e#7#47#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/cd44c293/0bf0ae66-4877-4a35-ad98-8727871fc3d1/main.questions">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1108,11 +1078,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cd44c293/0bf0ae66-4877-4a35-ad98-8727871fc3d1/main.answers">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cd44c293/0bf0ae66-4877-4a35-ad98-8727871fc3d1/main.questions">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="33" selection-end-line="168" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="273">
+          <caret line="63" column="148" lean-forward="false" selection-start-line="63" selection-start-column="148" selection-end-line="63" selection-end-column="148" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

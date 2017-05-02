@@ -44,7 +44,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="form-group" v-if="!success">
                         <label></label>
-                        <input type="text" class="form-control input-height font" v-model="userAnswer" placeholder="請輸入不重複數字">
+                        <input type="text" class="form-control input-height font" v-on:keyup.enter="checkGameAnswer"  v-model="userAnswer" placeholder="請輸入不重複數字">
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4">
@@ -61,7 +61,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-6">
-                    <textarea class="form-control font" v-model="answerHistory" style="height: 450px; resize: none;"></textarea>
+                    <textarea class="form-control font" v-model="answerHistory" readonly style="height: 450px; resize: none; background-color: #fff;"></textarea>
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <label class="label-size" ></label>
