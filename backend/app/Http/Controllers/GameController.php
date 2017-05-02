@@ -32,7 +32,7 @@ class GameController extends Controller
     {
         $msg = array('data' => array('answer' => '', 'state' => ''));
         if ($this->answerRepository->checkTheUsedAnswer($request->userAnswer)) {
-            return response()->json(['status' => 200, 'error' => array('答案已經輸入過了')]);
+            return response()->json(['status' => 200, 'error' => array('此答案已經輸入過了')]);
         }
         $this->answerRepository->saveAnswer($request->userAnswer, $this->checkAnswerAB($request->userAnswer));
         $msg['data']['answer'] = $request->userAnswer;
