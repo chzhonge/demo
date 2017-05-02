@@ -33,5 +33,4 @@ class AnswerRepository
         }
         return Answer::where('questionID', $questionID)->get();
     }
-
 }

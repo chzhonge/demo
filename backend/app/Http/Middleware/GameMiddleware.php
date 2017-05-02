@@ -8,9 +8,7 @@ use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use App\Http\Controllers;
 use App\Models\Question;
-
 use Validator;
-
 
 class GameMiddleware
 {
@@ -23,7 +21,6 @@ class GameMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-
         $messages = [
             'required'    => '請輸入答案',
             'from_number_zero_int' => '請輸入數字',
@@ -42,9 +39,6 @@ class GameMiddleware
             return response()->json(['status' => 200, 'error' => $error]);
         }
 
-
-
         return $next($request);
     }
-
 }

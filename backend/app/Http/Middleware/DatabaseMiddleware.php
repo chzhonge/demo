@@ -19,7 +19,9 @@ class DatabaseMiddleware
             return $next($request);
         } catch (\PDOException $e) {
             Log::info($e->getMessage());
-            return response()->json(['status' => 200, 'error' => 'PDO Drivers尚未安裝或資料庫問題，請查看Lumen.log。']);
+            return response()->json([
+                'status' => 200,
+                'error' => 'PDO Drivers尚未安裝或資料庫問題，請查看Lumen.log。']);
         }
     }
 }

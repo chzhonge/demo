@@ -31,12 +31,15 @@ class GameController extends Controller
     public function checkUsedAnswer(Request $request)
     {
         $msg = array('data' => array('answer' => '', 'state' => ''));
+
         if ($this->answerRepository->checkTheUsedAnswer($request->userAnswer)) {
             return response()->json(['status' => 200, 'error' => array('此答案已經輸入過了')]);
         }
+
         $this->answerRepository->saveAnswer($request->userAnswer, $this->checkAnswerAB($request->userAnswer));
         $msg['data']['answer'] = $request->userAnswer;
         $msg['data']['state'] = $this->checkAnswerAB($request->userAnswer);
+
         return response()->json(['status' => 200, $msg]);
     }
 
@@ -62,6 +65,7 @@ class GameController extends Controller
                 }
             }
         }
+
         return sprintf('%dA%dB', $aIsCorrect, $bIsCorrect);
     }
 
@@ -74,6 +78,7 @@ class GameController extends Controller
     {
         $file = fopen("answerHistory.txt", "w+");
         $data = $this->answerRepository->getAnswerHistory();
+
         if ($data == '') {
             fwrite($file, '作答紀錄'.PHP_EOL);
             fclose($file);
@@ -84,6 +89,7 @@ class GameController extends Controller
             }
             fclose($file);
         }
+
         return response()->download(getcwd().'/answerHistory.txt', 'answerHistory.txt');
     }
 }

@@ -64,5 +64,4 @@ class WebTest extends TestCase
                 "status" => 200
             ]);
     }
-
 }

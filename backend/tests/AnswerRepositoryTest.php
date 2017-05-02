@@ -27,6 +27,9 @@ class AnswerRepositoryTest extends TestCase
 
     public function testGetAnswerHistory()
     {
-        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $this->repository->getAnswerHistory());
+        $this->assertInstanceOf(
+            'Illuminate\Database\Eloquent\Collection',
+            $this->repository->getAnswerHistory()
+        );
     }
 }
