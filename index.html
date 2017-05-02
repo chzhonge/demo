@@ -164,8 +164,9 @@
                                     self.helpMsg = self.userAnswer+'：正確';
                                     localStorage.setItem("success", true);
                                     localStorage.setItem("helpMsg", self.userAnswer+'：正確');
+                                } else {
+                                    self.helpMsg = '輸入的答案：'+self.userAnswer+'：'+response.data[0].data.state;
                                 }
-                                self.helpMsg = '輸入的答案：'+self.userAnswer+'：'+response.data[0].data.state;
                                 self.userAnswer ='';
                             }
                         })

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c446b895-714d-4ea4-baa5-66a315c1bf48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/GameController.php" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/GameController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/app/Http/Middleware/DatabaseMiddleware.php" afterPath="$PROJECT_DIR$/backend/app/Http/Middleware/DatabaseMiddleware.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/app/Http/Middleware/GameMiddleware.php" afterPath="$PROJECT_DIR$/backend/app/Http/Middleware/GameMiddleware.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/backend/app/Providers/AppServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/app/Repositories/AnswerRepository.php" afterPath="$PROJECT_DIR$/backend/app/Repositories/AnswerRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/app/Repositories/QuestionRepository.php" afterPath="$PROJECT_DIR$/backend/app/Repositories/QuestionRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/database/database.sqlite" afterPath="$PROJECT_DIR$/backend/database/database.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/AnswerRepositoryTest.php" afterPath="$PROJECT_DIR$/backend/tests/AnswerRepositoryTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/WebTest.php" afterPath="$PROJECT_DIR$/backend/tests/WebTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -211,8 +202,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="120" column="33" lean-forward="false" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="33" />
+            <state relative-caret-position="408">
+              <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="33" selection-end-line="168" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -618,7 +609,7 @@
       <workItem from="1493439237397" duration="27053000" />
       <workItem from="1493526504475" duration="39192000" />
       <workItem from="1493611958005" duration="19038000" />
-      <workItem from="1493685982723" duration="6602000" />
+      <workItem from="1493685982723" duration="6703000" />
     </task>
     <servers />
   </component>
@@ -646,7 +637,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113495000" />
+    <option name="totallyTimeSpent" value="113596000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1119,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="120" column="33" lean-forward="false" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="33" />
+        <state relative-caret-position="408">
+          <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="33" selection-end-line="168" selection-end-column="33" />
           <folding />
         </state>
       </provider>
