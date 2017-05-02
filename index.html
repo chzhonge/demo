@@ -71,11 +71,13 @@
         </div>
     </div>
     <script>
-        var START_GAME_URL = './backend/public/start';
-        var RESTART_GAME_URL = './backend/public/restart';
-        var ANSWER_HISTORY_URL = './backend/public/history';
+        var GET_NEW_APi ='?t='+new Date().getTime();
+        var START_GAME_URL = './backend/public/start'+GET_NEW_APi;
+        var RESTART_GAME_URL = './backend/public/restart'+GET_NEW_APi;
+        var ANSWER_HISTORY_URL = './backend/public/history'+GET_NEW_APi;
         var CHECK_ANSWER_URL = './backend/public/check';
         var ANSWER_LENGTH = 4;
+
         var app = new Vue({
             el: '#app',
             data: {
@@ -88,7 +90,7 @@
                 answerList:'',
                 success: false
             },
-            mounted: function () {
+            created: function () {
                 this.checkGamePlayed();
             },
             methods:{
@@ -118,7 +120,9 @@
                                 for (var s = 0; s < Object.keys(data).length; s++) {
                                     self.answerHistory +='\r\n';
                                     self.answerHistory +=data[s].answer+'：'+data[s].state;
+                                    console.log(data[s].answer+'：'+data[s].state);
                                 }
+                                console.log('做完了');
                             }
                         })
                         .catch(function (error) {
@@ -166,7 +170,9 @@
                                     localStorage.setItem("helpMsg", self.userAnswer+'：正確');
                                 } else {
                                     self.helpMsg = '輸入的答案：'+self.userAnswer+'：'+response.data[0].data.state;
+
                                 }
+                                console.log('作答完畢');
                                 self.userAnswer ='';
                             }
                         })
