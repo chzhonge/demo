@@ -2,73 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c446b895-714d-4ea4-baa5-66a315c1bf48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.css/nv.d3.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.js/d3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.js/file.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.js/holder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.js/html5shiv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.js/nv.d3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/.js/respond.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Console/Kernel.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Console/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Console/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Events/Event.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Events/ExampleEvent.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Events/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Events/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Exceptions/Handler.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Exceptions/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Exceptions/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Controllers/Controller.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Controllers/ExampleController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Controllers/FileController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Controllers/GameController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Controllers/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Controllers/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Middleware/Authenticate.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Middleware/ExampleMiddleware.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Middleware/GameMiddleware.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Middleware/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/Middleware/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Http/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Jobs/ExampleJob.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Jobs/Job.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Jobs/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Jobs/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Listeners/ExampleListener.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Listeners/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Listeners/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Models/Answer.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Models/Question.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Models/User.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Models/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Models/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Providers/AppServiceProvider.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Providers/AuthServiceProvider.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Providers/EventServiceProvider.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Providers/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Providers/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Repositories/AnswerRepository.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Repositories/QuestionRepository.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Repositories/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/Repositories/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/report/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.env" afterPath="$PROJECT_DIR$/backend/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/database/database.sqlite" afterPath="$PROJECT_DIR$/backend/database/database.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.gitignore" afterPath="$PROJECT_DIR$/backend/.gitignore" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -165,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -174,6 +109,16 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -259,7 +204,6 @@
         <option value="$PROJECT_DIR$/backend/app/Test.php" />
         <option value="$PROJECT_DIR$/backend/vendor/laravel/lumen-framework/config/app.php" />
         <option value="$PROJECT_DIR$/backend/vendor/laravel/lumen-framework/resources/lang/en/validation.php" />
-        <option value="$PROJECT_DIR$/backend/.gitignore" />
         <option value="$PROJECT_DIR$/backend/app/Models/Question.php" />
         <option value="$PROJECT_DIR$/backend/tests/AnswerTest.php" />
         <option value="$PROJECT_DIR$/backend/tests/AnswerReposityTest.php" />
@@ -289,6 +233,7 @@
         <option value="$PROJECT_DIR$/backend/storage/logs/lumen.log" />
         <option value="$PROJECT_DIR$/backend/.env" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/backend/.gitignore" />
       </list>
     </option>
   </component>
@@ -407,6 +352,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pixnet" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixnet" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -575,7 +534,7 @@
       <workItem from="1493685982723" duration="18310000" />
       <workItem from="1493707876203" duration="516000" />
       <workItem from="1493708410850" duration="1270000" />
-      <workItem from="1493782324823" duration="1175000" />
+      <workItem from="1493782324823" duration="1334000" />
     </task>
     <servers />
   </component>
@@ -603,7 +562,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128164000" />
+    <option name="totallyTimeSpent" value="128323000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,8 +575,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1021" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26894343" sideWeight="0.49415693" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26894343" sideWeight="0.49415693" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.49573106" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.50213444" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17075774" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -696,13 +656,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/tests/ExampleTest.php" />
     <entry file="file://$PROJECT_DIR$/backend/phpunit.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1021,6 +974,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
